@@ -1,0 +1,29 @@
+{
+  "name": "kits-js",
+  "version": "1.0.0",
+  "description": "a portable js lib for js operate ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieltao1993/kits-js.git"
+  },
+  "keywords": [
+    "toolbox",
+    "http"
+  ],
+  "author": "Daniel Kong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danieltao1993/kits-js/issues"
+  },
+  "homepage": "https://github.com/danieltao1993/kits-js#readme",
+  "dependencies": {
+    "kits-js": "^1.0.0"
+  }
+}
