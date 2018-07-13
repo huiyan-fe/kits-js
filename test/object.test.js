@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import {
-    Obj
+    obj
 } from '../lib/index.js';
 
 var o1 = {
@@ -26,7 +26,9 @@ var o2 = {
     c: 'daniel'
 }
 
-let om = Obj.mrege(o1, o2);
-let clone = Obj.deepClone(o1);
+let om = obj.mrege(o1, o2);
+let clone = obj.deepClone(o1);
+console.log('----------obj test-------------');
 console.log('merge', om);
 console.log('clone', clone);
+console.log('-----------------------');
