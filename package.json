@@ -1,6 +1,6 @@
 {
   "name": "kits-js",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "a portable js lib for js operate ",
   "main": "lib/index.js",
   "directories": {

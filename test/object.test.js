@@ -26,9 +26,20 @@ var o2 = {
     c: 'daniel'
 }
 
-let om = obj.mrege(o1, o2);
+let om = obj.merge(o1, o2);
 let clone = obj.deepClone(o1);
 console.log('----------obj test-------------');
 console.log('merge', om);
+console.log('----------obj clone obj -------------');
 console.log('clone', clone);
+console.log('----------obj clone Array-------------');
+var a = [];
+let _a = obj.deepClone(a);
+var a1 = [{
+    1: 3
+}, {
+    hello: 'daniel'
+}];
+let _a1 = obj.deepClone(a1);
+console.log('array clone', _a, _a1);
 console.log('-----------------------');

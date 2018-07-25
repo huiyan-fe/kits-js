@@ -153,10 +153,7 @@ function jsonp(params) {
 const http = {
     fetch,
     ajax,
-    jsonp,
-    test: function () {
-        console.log('test kits-js http');
-    }
+    jsonp
 };
 
 export default http;

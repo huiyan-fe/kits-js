@@ -4,5 +4,5 @@ import {
 } from '../lib/index.js';
 
 console.log('-------http test-------');
-http.test()
+// http.test()
 console.log('-----------------------');

@@ -3,6 +3,6 @@ import merge from './merge.js';
 
 const extend = {
     deepClone: deepClone,
-    mrege: merge
+    merge: merge
 }
 export default extend;

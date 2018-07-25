@@ -1,6 +1,5 @@
 import http from './http.js';
+import download from './download.js';
+http.download = download;
 
-// const http = {
-//     http: http
-// }
 export default http;
