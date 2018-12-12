@@ -1,7 +1,7 @@
 const merge = function (tar, source) {
     const merge = (origin, modifys) => {
         for (var k in modifys) {
-            if (typeof (modifys[k]) == 'object') {
+            if (Object.prototype.toString.call(modifys[k]) == '[object Object]') {
                 if (typeof (origin[k]) !== 'object') {
                     origin[k] = {}
                 }
