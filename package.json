@@ -1,6 +1,6 @@
 {
   "name": "kits-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a portable js lib for js operate ",
   "main": "lib/index.js",
   "directories": {
@@ -10,7 +10,7 @@
     "build:lib": "rm -rf lib && babel src -d lib",
     "build:dist": "webpack",
     "build": "npm run build:lib && npm run build:dist ",
-    "prepublish": "npm run build"
+    "pub": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
