@@ -12,10 +12,12 @@ var o1 = {
             bbb: 2
         }
     },
-    b: 'hello'
+    b: 'hello',
+    e: 'o2 dont have',
+    g: 'o2 different',
 }
 var o2 = {
-    o: {
+    a: {
         aa: {
             aaa: 'first'
         },
@@ -23,23 +25,41 @@ var o2 = {
             bbb: 2
         }
     },
-    s: 'daniel',
-    nu: null,
-    un: undefined,
-    ks: '',
-    array: [{
-        1: 3
-    }, {
-        hello: 'daniel'
-    }]
+    c: 'daniel',
+    f: 'o1 dont have',
+    g: 'different',
 }
+describe('test object operate funcs', () => {
+    test('obj.merge two object', () => {
+        let mo = obj.merge(o1, o2);
+        expect(mo).toBeInstanceOf(Object);
+        expect(mo).toHaveProperty('a.aa.aaa');
+        expect(mo).toHaveProperty('a');
+        expect(mo).toHaveProperty('c');
+    });
 
-let om = obj.merge(o1, o2);
-let clone = obj.deepClone(o2);
-console.log('----------obj test-------------');
-console.log('merge', om);
-console.log('----------obj clone obj -------------');
-console.log('clone', clone);
-console.log('----------obj clone Array-------------');
+    test('diff two object', () => {
+        let d = obj.diff(o1, o2);
+        expect(d).toBeInstanceOf(Object);
+        expect(d).toHaveProperty('a.bb.bbb');
+        expect(d.e).toBe(undefined);
+        expect(d.g).toBe('different');
+    });
 
-console.log('-----------------------');
+    test('obj.deepClone Object', () => {
+        let c = obj.deepClone(o1);
+        expect(c).toEqual(o1);
+    });
+
+    test('obj.deepClone Array', () => {
+        var a1 = [{
+            1: 3
+        }, {
+            hello: {
+                name: 'daniel'
+            }
+        }];
+        let c = obj.deepClone(a1);
+        expect(c).toEqual(a1);
+    });
+});
