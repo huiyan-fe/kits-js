@@ -3,11 +3,20 @@ import {
     bmap
 } from '../lib/index.js';
 
-var sps = '114.33,40.22,114.33,40.22,114.33,40.22|114.33,40.22,114.33,40.22,114.33,40.22';
-var sp = '114.33,40.22';
-let ps = bmap.getPoints(sps, true);
-let p = bmap.createPoint(sp, true);
-console.log('-------bmap test-------');
-console.log('getPoints', ps);
-console.log('createPoint', p);
-console.log('-----------------------');
+var multiPointString = '114.33,40.22,114.33,40.22,114.33,40.22|114.33,40.22,114.33,40.22,114.33,40.22';
+var stringPoint = '114.33,40.22';
+
+describe('test object operate funcs', () => {
+    test('parse multi point array string', () => {
+        let ps = bmap.getPoints(multiPointString, true);
+        expect(ps).toBeInstanceOf(Array);
+        expect(ps).toHaveLength(2);
+    })
+
+    test('parse string to Object', () => {
+        let p = bmap.createPoint(stringPoint, true);
+        expect(p).toBeInstanceOf(Object);
+        expect(p).toHaveProperty('lng');
+        expect(p).toHaveProperty('lat');
+    });
+});
