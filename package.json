@@ -1,6 +1,6 @@
 {
   "name": "kits-js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a portable js lib for js operate ",
   "main": "lib/index.js",
   "directories": {
@@ -32,10 +32,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "chai": "~3.4.1",
     "cz-conventional-changelog": "^2.1.0",
-    "mocha": "~2.3.4",
-    "mochawesome": "~1.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "webpack": "^4.16.0",
@@ -44,9 +41,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "mocha": "^5.2.0",
-    "node-fetch": "~1.3.3",
-    "superagent": "~1.4.0"
+    "node-fetch": "~1.3.3"
   },
   "config": {
     "commitizen": {
