@@ -21,7 +21,7 @@
 option parameters:
 
 |param|type|description|  
-|:-:|:-:|:-:|:-:|:-:|  
+|:-:|:-:|:-:|
 |url|String|The URL of the resource/api| 
 |timeout|Number|The URL of the resource/api|  
 |method|String|GET or POST method default GET|  
@@ -42,7 +42,7 @@ example:
 #### 1.4 http.download(url,fileName)   
 
 |param|type|description|
-|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|
 |url|String|The URL of the resource/api|
 |fileName|String|the name you want to name the file|
 
