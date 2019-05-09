@@ -2,25 +2,26 @@
     a easy use js library for some operates with js  
 目录
 =
-1. [http](#http)   
-    - [http.fetch](#11-httpfetchoption)    
-    - [http.ajax](#11-httpajaxoption)   
-    - [http.jsonp](#11-httpjsonpoption) 
-1. [obj](#obj)   
-    - [obj.deepClone](#21-objdeepclonesource)
-    -  [obj.diff](#22-objdiffsrc1src2)  
-    -  [obj.merge](#22-objmergesrc1src2)
-
+1. [http](#1-http)   
+    - [1.1 http.fetch](#11-httpfetchoption)    
+    - [1.2 http.ajax](#12-httpajaxoption)   
+    - [1.3 http.jsonp](#13-httpjsonpoption) 
+    - [1.4 http.download](#14-httpdownloadurlfilename) 
+2. [obj](#2-obj)   
+    - [2.1 obj.deepClone](#21-objdeepclonesource)
+    -  [2.2 obj.diff](#22-objdiffsrc1src2)  
+    -  [2.3 obj.merge](#23-objmergesrc1src2)
 
 ###  1. http
 #### 1.1 http.fetch(option) 
 #### 1.2 http.ajax(option)  
-#### 3.3 http.jsonp(option)  
+#### 1.3 http.jsonp(option)  
+
 option parameters:
 
     |param|type|description|  
     |:-:|:-:|:-:|:-:|:-:|  
-    |url|String|The URL of the resource/api|  
+    |url|String|The URL of the resource/api| 
     |timeout|Number|The URL of the resource/api|  
     |method|String|GET or POST method default GET|  
     |success|Function|the request success callback|  
@@ -42,7 +43,7 @@ http.fetch({
         }
     });
 ```
-4. http.download(url,fileName)  
+#### 1.4 http.download(url,fileName)   
     |param|type|description|
     |:-:|:-:|:-:|:-:|:-:|
     |url|String|The URL of the resource/api|
