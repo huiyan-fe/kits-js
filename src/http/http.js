@@ -57,10 +57,11 @@ function ajax(params) {
         client.send(dataStr.join('&'));
     }
     // timeout
+    let waitTime = params.timeout || 10000;
     const timeout = setTimeout(() => {
         client.abort();
         params.fail && params.fail('timeout');
-    }, 10000);
+    }, waitTime);
     //
     client.onload = function onload() {
         if (this.status >= 200 && this.status < 300) {
@@ -102,6 +103,7 @@ function jsonp(params) {
     params.url += `callback=${callbackID}`;
     script.src = params.url;
     document.head.appendChild(script);
+    let waitTime = params.timeout || 10000;
     const timeout = setTimeout(() => {
         if (window[callbackID] !== null) {
             window[callbackID] = null;
@@ -113,7 +115,7 @@ function jsonp(params) {
             });
             params.complete && params.complete(JSON.parse());
         }
-    }, 10000);
+    }, waitTime);
 
     script.addEventListener('error', (e) => {
         window[callbackID] = null;

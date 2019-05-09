@@ -2935,12 +2935,6 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@~1.3.3:
-  version "1.3.3"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.3.tgz#880228be75fd207a8a9baa2042ead437e6edaf84"
-  dependencies:
-    encoding "^0.1.11"
-
 node-forge@0.7.5:
   version "0.7.5"
   resolved "https://registry.npmjs.org/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"

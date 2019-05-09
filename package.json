@@ -1,6 +1,6 @@
 {
   "name": "kits-js",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "a portable js lib for js operate ",
   "main": "lib/index.js",
   "directories": {
@@ -40,8 +40,6 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "node-fetch": "~1.3.3"
   },
   "config": {
     "commitizen": {
