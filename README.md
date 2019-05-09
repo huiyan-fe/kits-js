@@ -1,16 +1,17 @@
-# kits-js  
+ **kits-js**   
+--
     a easy use js library for some operates with js  
-目录
-=
-1. [http](#1-http)   
-    - [1.1 http.fetch](#11-httpfetchoption)    
-    - [1.2 http.ajax](#12-httpajaxoption)   
-    - [1.3 http.jsonp](#13-httpjsonpoption) 
-    - [1.4 http.download](#14-httpdownloadurlfilename) 
-2. [obj](#2-obj)   
-    - [2.1 obj.deepClone](#21-objdeepclonesource)
-    -  [2.2 obj.diff](#22-objdiffsrc1src2)  
-    -  [2.3 obj.merge](#23-objmergesrc1src2)
+
+- [ **kits-js** ](#kits-js)
+    - [1. http](#1-http)
+        - [1.1 http.fetch(option)](#11-httpfetchoption)
+        - [1.2 http.ajax(option)](#12-httpajaxoption)
+        - [1.3 http.jsonp(option)](#13-httpjsonpoption)
+        - [1.4 http.download(url,fileName)](#14-httpdownloadurlfilename)
+    - [2. obj](#2-obj)
+        - [2.1. obj.deepClone(source)](#21-objdeepclonesource)
+        - [2.2. obj.diff(src1,src2)](#22-objdiffsrc1src2)
+        - [2.3. obj.merge(src1,src2)](#23-objmergesrc1src2)
 
 ###  1. http
 #### 1.1 http.fetch(option) 
@@ -18,14 +19,14 @@
 #### 1.3 http.jsonp(option)  
 
 option parameters:
+|param|type|description|  
+|:-:|:-:|:-:|:-:|:-:|  
+|url|String|The URL of the resource/api| 
+|timeout|Number|The URL of the resource/api|  
+|method|String|GET or POST method default GET|  
+|success|Function|the request success callback|  
+|fail|Function|the request fail callback| 
 
-    |param|type|description|  
-    |:-:|:-:|:-:|:-:|:-:|  
-    |url|String|The URL of the resource/api| 
-    |timeout|Number|The URL of the resource/api|  
-    |method|String|GET or POST method default GET|  
-    |success|Function|the request success callback|  
-    |fail|Function|the request fail callback| 
 example:
 ```
 http.fetch({
@@ -44,10 +45,10 @@ http.fetch({
     });
 ```
 #### 1.4 http.download(url,fileName)   
-    |param|type|description|
-    |:-:|:-:|:-:|:-:|:-:|
-    |url|String|The URL of the resource/api|
-    |fileName|String|the name you want to name the file|
+|param|type|description|
+|:-:|:-:|:-:|:-:|:-:|
+|url|String|The URL of the resource/api|
+|fileName|String|the name you want to name the file|
 
 ### 2. obj 
     for Object operations
@@ -92,7 +93,9 @@ var o2 = {
     g: 'different',
 }
 let diff = obj.diff(o1,o2);
+
 ```
+
 #### 2.3.  obj.merge(src1,src2) 
     src1/src2:  
         the same as obj.diff  
@@ -100,10 +103,7 @@ let diff = obj.diff(o1,o2);
         return the merged object of src1 && src2  
         the src2 will only overwrite the string/number property values of src1
 example:
+
 ```
     let merged = obj.merge(o1,o2)
 ```
-
-
-#### 3. Jest for test
-    just run jest in root directory.
