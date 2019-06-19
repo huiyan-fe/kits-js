@@ -1,6 +1,6 @@
 {
   "name": "kits-js",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "a portable js lib for js operate ",
   "main": "lib/index.js",
   "directories": {
@@ -39,8 +39,7 @@
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^2.5.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

@@ -3,28 +3,25 @@
  * @file http
  */
 /* globals XMLHttpRequest window location document*/
-/**
- * get the data from url
- * auto use jsonp or ajax
- * @params 传入的参数
- * @params.url
- */
-function fetch(params) {
-    let fetchObj = null;
-    if (/^http(s{0,1}):\/\//.test(params.url)) {
-        const pageLoc = location.href.match(/^https{0,1}:\/\/(.+?)(?=\/|$)/);
-        const ajaxLoc = params.url.match(/^https{0,1}:\/\/(.+?)(?=\/|$)/);
-        if (pageLoc.length === 2 && ajaxLoc.length === 2 && ajaxLoc[1] === pageLoc[1]) {
-            fetchObj = this.ajax(params);
-        } else {
-            fetchObj = this.jsonp(params);
-        }
-    } else {
-        fetchObj = this.ajax(params);
-    }
-    return fetchObj;
-}
 
+function postDownload(options) {
+    const form = document.createElement('form');
+    form.action = options['url'];
+    form.method = options['method'] || 'post';
+    form.target = options['target'] || 'blank';
+    let params = options['data'];
+    params && params instanceof Object && Object.keys(params).map(k => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = k;
+        input.value = params[k];
+        form.appendChild(input);
+    })
+
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+}
 /**
  * @params.method
  * @params.data
@@ -32,7 +29,7 @@ function fetch(params) {
  * @params.fail
  * @params.success
  */
-function download(url, fileName) {
+function getDownload(url, fileName) {
     var a = document.createElement('a');
     a.style.display = 'none';
     // 字符内容转变成blob地址
@@ -52,5 +49,14 @@ function download(url, fileName) {
     // iframe.src = url;
     // iframe.style.display = "none";
 }
+
+function download(options, fileName) {
+    if (options && options instanceof Object && options.hasOwnProperty('url')) {
+        postDownload(options);
+    } else {
+        getDownload.apply(this, arguments);
+    }
+}
+
 
 export default download;
